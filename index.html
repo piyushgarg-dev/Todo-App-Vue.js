@@ -72,7 +72,7 @@
 
             <tbody id="tableBody"></tbody>
           </table>
-          <button onclick="app.clearAll()" id="clearBtn" class="btn btn-danger">Clear All</button>
+          <button onclick="app.clearAll()" v-if="localStorageHasItem()" id="clearBtn" class="btn btn-danger">Clear All</button>
         </div>
       </div>
     </div>
