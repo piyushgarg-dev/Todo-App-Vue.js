@@ -62,7 +62,12 @@ table tbody tr:nth-child(even)
     background-color: #fff;
 }
 
-
+#clearBtn{
+    display: block;
+    width: 70%;
+    margin: auto;
+    
+}
 
 
 @media(max-width:900px)

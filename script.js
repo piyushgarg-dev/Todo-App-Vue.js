@@ -74,6 +74,11 @@ var app = new Vue(
    {
         
        el.parentElement.parentElement.remove();
+   },
+   clearAll:function()
+   {
+       window.localStorage.removeItem('todo');
+       window.location.reload();
    }
      
  }
