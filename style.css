@@ -70,4 +70,25 @@ table tbody tr:nth-child(even)
     .container{
         max-width: 92%;
     }
+   
+}
+@media(max-width:500px)
+{
+    input[type="submit"]
+    {
+        display: block;
+        float: none;
+        width:100%;
+        margin-top:20px;
+        
+    }
+    input[type="text"]
+    {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .myForm{
+        height: 170px;
+    }
 }
