@@ -44,6 +44,16 @@ var app = new Vue(
 
 
      },
+     localStorageHasItem:function()
+     {
+        if(window.localStorage.getItem('todo'))
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+     },
      updateTaskToUI: function()
     {
         var tableBody = document.getElementById('tableBody');
