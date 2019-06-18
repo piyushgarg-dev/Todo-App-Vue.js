@@ -1,3 +1,18 @@
+Vue.component('navbar',
+{
+template:`
+<div>
+<div class="nav">
+        <p style="display: block">ToDo's</p>
+</div>
+</div>
+`
+});
+
+
+
+
+
 var app = new Vue(
 {
  el:'#myTodoApp',
@@ -83,7 +98,20 @@ var app = new Vue(
    remove:function(el)
    {
         
-       el.parentElement.parentElement.remove();
+      var mystr = el.parentElement.parentElement.innerHTML.split('<td>');
+      var t = mystr[2].split('</td>');
+      var taskDLT = t[0];
+      console.log(taskDLT);
+      var storedData = JSON.parse(window.localStorage.getItem('todo'));
+      storedData.forEach((data,index)=>{
+        if(data.text==taskDLT)
+        {
+            storedData.splice(index,1);
+        }
+      });
+
+      window.localStorage.setItem('todo',JSON.stringify(storedData));
+      window.location.reload();
    },
    clearAll:function()
    {
